@@ -1,0 +1,2 @@
+String.TestString
+String.StringInSquareForm

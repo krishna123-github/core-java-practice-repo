@@ -1,0 +1,2 @@
+core_java.CallingStaticMethodFromNonStatic
+core_java.test
