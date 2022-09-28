@@ -12,13 +12,26 @@ import java.util.List;
  * @author krishna
  */
 public class Employee {
-    String name;
-    Float salary;
-    String dep;
+
+    private String name;
+    private Float salary;
+    private String dep;
+    private Integer age;
+    private String city;
+
+    Department department;
+
     public Employee(String name, Float salary, String dep) {
         this.name = name;
         this.salary = salary;
         this.dep = dep;
+    }
+
+    public Employee(String name, Integer age, String city, Department department) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.department = department;
     }
 
     public String getName() {
@@ -44,25 +57,50 @@ public class Employee {
     public void setDep(String dep) {
         this.dep = dep;
     }
-    
-    public static List<Employee> getEmpList(){
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public static List<Employee> getEmpList() {
         List<Employee> empList = new ArrayList<>();
         empList.add(new Employee("Krishna", 70000.01f, "Developer"));
         empList.add(new Employee("Parves", 60000.01f, "Tester"));
         empList.add(new Employee("Basant", 90000.01f, "Manager"));
         empList.add(new Employee("Amit", 30000.01f, "BA"));
         empList.add(new Employee("Rahul", 10000.01f, "Analysist"));
-        
+
         return empList;
     }
-     public static List<Employee> getEmpListDuplicateRecords(){
+
+    public static List<Employee> getEmpListDuplicateRecords() {
         List<Employee> empList = new ArrayList<>();
         empList.add(new Employee("Krishna", 70000.01f, "Developer"));
         empList.add(new Employee("Amit", 60000.01f, "Tester"));
         empList.add(new Employee("Krishna", 90000.01f, "Manager"));
         empList.add(new Employee("Amit", 30000.01f, "BA"));
         empList.add(new Employee("Rahul", 10000.01f, "Analysist"));
-        
+
         return empList;
     }
 
@@ -70,5 +108,5 @@ public class Employee {
     public String toString() {
         return "Employee{" + "name=" + name + ", salary=" + salary + ", dep=" + dep + '}';
     }
-        
+
 }
