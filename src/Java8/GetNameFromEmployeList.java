@@ -4,6 +4,7 @@
  */
 package Java8;
 
+import Java8.domain.Employee;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -36,6 +37,6 @@ public class GetNameFromEmployeList {
         // 5. Get map employe with therir departments   Amit-->tester, BA
         List<Employee> empList2 = Employee.getEmpListDuplicateRecords();
         Map<String, List<String>> empDepMap = new HashMap<>();
-        empList2.stream().forEach(e -> empDepMap.computeIfAbsent(e.getName(), d -> new ArrayList(e.getDep())));
+//        empList2.stream().forEach(e -> empDepMap.computeIfAbsent(e.getName(), d -> new ArrayList(e.getDep())));
     }
 }
