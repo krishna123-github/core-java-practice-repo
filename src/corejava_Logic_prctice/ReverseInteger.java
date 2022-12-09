@@ -14,7 +14,7 @@ public class ReverseInteger {
         System.out.println();
         
         while(number > 0){
-            r = number % 10;
+            r = number % 10; 
             reverse = reverse * 10 + r;
             number = number / 10;
         }

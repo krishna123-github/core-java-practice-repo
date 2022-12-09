@@ -85,9 +85,12 @@ public class Employee {
     public static List<Employee> getEmpList() {
         List<Employee> empList = new ArrayList<>();
         empList.add(new Employee("Krishna", 70000.01f, "Developer"));
+        empList.add(new Employee("Neha", 10000.01f, "BA"));
         empList.add(new Employee("Parves", 60000.01f, "Tester"));
+        empList.add(new Employee("Moni", 50000.01f, "BA"));
         empList.add(new Employee("Basant", 90000.01f, "Manager"));
         empList.add(new Employee("Amit", 30000.01f, "BA"));
+        empList.add(new Employee("Bsant", 30000.01f, "Developer"));
         empList.add(new Employee("Rahul", 10000.01f, "Analysist"));
 
         return empList;

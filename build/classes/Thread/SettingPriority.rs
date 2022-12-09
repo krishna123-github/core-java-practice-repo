@@ -1,2 +1,0 @@
-Thread.Q
-Thread.SettingPriority

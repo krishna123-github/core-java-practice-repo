@@ -1,2 +1,0 @@
-String.TestSort
-String.SortStringUsingAPI

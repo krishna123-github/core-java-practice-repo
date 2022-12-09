@@ -1,2 +1,0 @@
-Thread.MyThread
-Thread.Test

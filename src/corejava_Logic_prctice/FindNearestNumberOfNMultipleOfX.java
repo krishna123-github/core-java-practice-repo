@@ -28,6 +28,9 @@ public class FindNearestNumberOfNMultipleOfX {
         System.out.println(x * result);
         
         
+        /**
+         * second senarios to fin closest number
+         */
         System.out.println(closestMultiple(n, x));
 
     }

@@ -17,8 +17,6 @@ public class RemoveCharacter {
         System.out.println(s3);
         
         String s4 = str.replace("pal", "pooja");   // ya (String, String)  lo
-        System.out.println(s4);
-        
-        
+        System.out.println(s4);        
     }
 }

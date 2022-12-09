@@ -4,11 +4,11 @@ package Object_Cloning;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Student implements Cloneable{    // firstly implements the Cloneable interface
+public class StudentClonable implements Cloneable{    // firstly implements the Cloneable interface
     int rollno;
     String name;
 
-    public Student(int rollno, String name) {
+    public StudentClonable(int rollno, String name) {
         this.rollno = rollno;
         this.name = name;
     }
@@ -22,15 +22,15 @@ public class Student implements Cloneable{    // firstly implements the Cloneabl
     
     public static void main(String[] args) {
         try {
-            Student s1 = new Student(102, "krishna");
+            StudentClonable s1 = new StudentClonable(102, "krishna");
             
-            Student s2 = (Student) s1.clone();
+            StudentClonable s2 = (StudentClonable) s1.clone(); /// clone karne ke baad new object create hoke assiggn hoga
      
             System.out.println(s1.rollno+"    "+s1.name+"     s1---> "+s1.hashCode()+"   "+s1);
             System.err.println(s2.rollno+"    "+s2.name+"     s2---> "+s2.hashCode()+"   "+s2);
             
         } catch (CloneNotSupportedException ex) {
-            Logger.getLogger(Student.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(StudentClonable.class.getName()).log(Level.SEVERE, null, ex);
         }   
     }
 }

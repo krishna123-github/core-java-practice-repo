@@ -1,3 +1,0 @@
-contructorExample.Contructor_chaining
-contructorExample.A
-contructorExample.B

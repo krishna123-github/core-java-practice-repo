@@ -1,2 +1,0 @@
-String.ReverseStringUsingAPI
-String.TestReverse

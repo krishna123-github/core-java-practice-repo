@@ -8,6 +8,9 @@ public class TestStringMethods {
         String str = "krishn123jhashd765765";
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
+            /**
+             * Character class have isDigit function to check char is digit or not
+             */
             if (Character.isDigit(str.charAt(i))) {
                 System.out.println("numeric value = " + Character.getNumericValue(str.charAt(i)));
                 sum = sum + Character.getNumericValue(str.charAt(i));

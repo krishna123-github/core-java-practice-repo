@@ -11,7 +11,7 @@ public class Find_concate {
         s = s1.concat("pooja");
         
         System.out.println("s: "+s.hashCode()+"  "+s);  // krshnapooja
-        System.out.println("s1: "+s.hashCode()+"  "+s1);
+        System.out.println("s1: "+s1.hashCode()+"  "+s1);
         System.out.println("s2: "+s);
         
     }

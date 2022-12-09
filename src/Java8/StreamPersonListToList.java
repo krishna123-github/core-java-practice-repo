@@ -16,7 +16,8 @@ import java.util.stream.Collectors;
 public class StreamPersonListToList {
 
     public static void main(String[] args) {
-        List<Person> personList = Arrays.asList(new Person("krishna", "krishna@gmail.com", true, 22),
+        List<Person> personList = Arrays.asList(
+                new Person("krishna", "krishna@gmail.com", true, 22),
                 new Person("Jiten", "jiten@gmail.com", false, 32),
                 new Person("Dhrub", "dhrub@gmail.com", true, 19));
 
@@ -27,21 +28,21 @@ public class StreamPersonListToList {
         }
         System.out.println(listOfEmail);
 
-        System.out.println("OR = via stream api");
+        System.out.println("OR = via stream api with Reference method");
         List l = personList.stream()
                 .map(Person::getEmailAddress)
                 .map(InternetAddress::new)
                 .collect(Collectors.toList());
         System.out.println(l);
 
-        System.out.println("OR = via stream api");
+        System.out.println("OR = via stream api using Function");
         List l2 = personList.stream()
                 .map(x -> x.getEmailAddress())
                 .map(x -> new InternetAddress(x))
                 .collect(Collectors.toList());
         System.out.println(l2);
 
-        System.out.println("2===> Get email from persona where newsletter is opted in");
+        System.out.println("2===> Get email from person where newsletter is opted in");
         List<InternetAddress> l3 = new ArrayList<>();
         for (Person p : personList) {
             if (p.isNewsletterOptedIn()) {
@@ -60,8 +61,8 @@ public class StreamPersonListToList {
 
         System.out.println("3===> Get email from persona where newsletter is opted in and age is greatter then 20");
         List l5 = personList.stream()
-                .filter(x -> x.isNewsletterOptedIn())
-                .filter(x -> x.getAge() > 20)
+                .filter(x -> x.isNewsletterOptedIn() && x.getAge() > 20)
+//                .filter(x -> x.getAge() > 20)
                 .map(Person :: getEmailAddress)
                 .map(InternetAddress :: new)
                 .collect(Collectors.toList());

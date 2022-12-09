@@ -1,12 +1,14 @@
 package String;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class SortStringArr {
 
     public static void main(String[] args) {
-        String[] myArray = {"Krishna", "Amit", "Dharmendra", "Aman", "Bablus"};
+        String[] globalArr = {"Krishna", "Amit", "Dharmendra", "Aman", "Bablus"};
         
+        String[] myArray = globalArr;
         Arrays.sort(myArray);
         System.out.println(myArray);
 
@@ -21,5 +23,15 @@ public class SortStringArr {
             }
         }
         System.out.println(Arrays.toString(myArray));
+        
+        System.out.println("Sorted by Stream of arrays");
+        Stream.of(myArray).sorted().forEach(System.out :: println);
+        
+        System.out.println("Sorted by stream of list");
+        String[] arr2 = globalArr;
+        Arrays.asList(arr2)
+                .stream()
+                .sorted()
+                .forEach(System.out :: println);
     }
 }

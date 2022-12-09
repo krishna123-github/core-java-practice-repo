@@ -47,12 +47,12 @@ public class StreamPersonList_Reduce {
                 .ifPresent(System.out::println);
 
         Arrays.asList(1, 2, 5, 6, 3).stream()
-                .reduce(Integer::max)
+                .reduce(Integer::max) // reduce() 
                 .ifPresent(System.out::println);
 
         // Wrong 
         Arrays.asList(1, 2, 5, 6, 3).stream()
-                .max(Integer::max)
+                .max(Integer::max) // max(Comparator)
                 .ifPresent(System.out::println);
         // Wrong 
         Arrays.asList(1, 2, 5, 6, 3).stream()
@@ -65,8 +65,14 @@ public class StreamPersonList_Reduce {
      * easily:
      */
     private void useReduceMethod_getMaxString() {
+        System.out.println("===========using max");
         Arrays.asList("Rahul", "prakash", "Krishna", "pradeep", "Amit").stream()
                 .max((max, temp) -> max.compareTo(temp))
+                .ifPresent(System.out::println);
+
+        System.out.println("===========using reduce");
+        Arrays.asList("Rahul", "prakash", "Krishna", "pradeep", "Amit").stream()
+                .reduce((max, temp) -> max.compareTo(temp) > 1 ? max :temp)
                 .ifPresent(System.out::println);
 
         System.out.println("Asc: if all starts with capial/small letter then only it will do proper shorting================");

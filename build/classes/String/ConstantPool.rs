@@ -1,2 +1,0 @@
-String.ConstantPool
-String.test

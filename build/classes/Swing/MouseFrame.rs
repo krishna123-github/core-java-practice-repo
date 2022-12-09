@@ -1,2 +1,0 @@
-Swing.MouseFrame
-Swing.MouseDemo

@@ -10,7 +10,7 @@ public class CompareElement {
  
     public static void main(String[] args) {
         // TODO code application logic here
-        String[] str = {"keishna","duraj","ritesh","sanjay","raj"};
+        String[] str = {"keishna","duraj","ritesh","sanjay","raj", "Puraj"};
         
         Set set = new TreeSet();
         for(int i=0; i<str.length; i++){
