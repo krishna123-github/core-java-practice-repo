@@ -29,3 +29,12 @@ public interface MultipleInterfaceTest extends MySqlDbInterface, OracleDbInterfa
         System.out.println("Default getConnection");
     }
 }
+ class Test implements MultipleInterfaceTest{
+     public static void main(String[] args) {
+         OracleDbInterface b = new DatabaseImpl();
+         b.getConnection();
+         
+         MySqlDbInterface t = new Test();
+         t.getConnection();
+     }
+ }

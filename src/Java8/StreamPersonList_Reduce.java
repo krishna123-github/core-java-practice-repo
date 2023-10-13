@@ -15,7 +15,8 @@ import java.util.List;
  */
 public class StreamPersonList_Reduce {
 
-    List<Person> personList = Arrays.asList(new Person("krishna", "krishna@gmail.com", true, 22),
+    List<Person> personList = Arrays.asList(
+            new Person("krishna", "krishna@gmail.com", true, 22),
             new Person("Jiten", "jiten@gmail.com", false, 32),
             new Person("Dhrub", "dhrub@gmail.com", true, 17),
             new Person("Pooja", "Pooja@gmail.com", true, 15));
@@ -32,9 +33,25 @@ public class StreamPersonList_Reduce {
      * examples very easily:
      */
     private void useReduceMethod_getMaxAge() {
+        System.out.println(" MAX AGE ============");
         System.out.println(personList.stream()
                 .map(Person::getAge)
                 .reduce((max, age) -> age > max ? age : max));
+
+        System.out.println(personList.stream()
+                .map(Person::getAge)
+                .reduce(Integer::max));
+
+        System.out.println(personList.stream()
+                .map(Person::getAge)
+                .max((max, age) -> age > max ? -1 : 1));
+
+        System.out.println(personList.stream()
+                .map(Person::getAge)
+                .max(Integer :: max));
+
+        System.out.println(personList.stream()
+                .max(Comparator.comparing(Person::getAge)));
     }
 
     /**
@@ -56,7 +73,7 @@ public class StreamPersonList_Reduce {
                 .ifPresent(System.out::println);
         // Wrong 
         Arrays.asList(1, 2, 5, 6, 3).stream()
-                .max((max, temp) -> temp > max ? temp : max)
+                .max((max, temp) -> temp > max ? -1 : 1)
                 .ifPresent(System.out::println);
     }
 
@@ -72,12 +89,12 @@ public class StreamPersonList_Reduce {
 
         System.out.println("===========using reduce");
         Arrays.asList("Rahul", "prakash", "Krishna", "pradeep", "Amit").stream()
-                .reduce((max, temp) -> max.compareTo(temp) > 1 ? max :temp)
+                .reduce((max, temp) -> max.compareTo(temp) > 1 ? max : temp)
                 .ifPresent(System.out::println);
 
         System.out.println("Asc: if all starts with capial/small letter then only it will do proper shorting================");
         Arrays.asList("Rahul", "Prakash", "Krishna", "Pradeep", "Amit").stream()
-                .sorted()
+                .sorted((x1, x2) -> x1.compareTo(x2)) // can use sort like this
                 .forEach(System.out::println);
         System.out.println("Asc: if all are not starts with capial/small letter then not do proper sorting===============");
         Arrays.asList("Rahul", "prakash", "krishna", "Pradeep", "Amit").stream()

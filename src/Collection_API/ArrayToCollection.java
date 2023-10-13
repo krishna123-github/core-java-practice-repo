@@ -5,6 +5,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,6 +34,10 @@ public class ArrayToCollection {
         for(String s : list){
             System.out.println(s);
         }
+        
+        // call create premitive type list 
+        int[] intArr = {1,2};
+       // List<int> list2 = new ArrayList<int>();
     }
     
 }

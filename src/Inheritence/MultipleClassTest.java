@@ -38,6 +38,11 @@ public class MultipleClassTest extends B  {
     public static void main(String args[]) {
         MultipleClassTest d = new MultipleClassTest();
         //creates ambiguity which display() method to call  
-        d.display();
+//        d.display();
+        
+        B b = new B();
+        B b1 = (B) new A();
+//        b1.display();
+        
     }
 }

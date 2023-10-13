@@ -12,10 +12,16 @@ public class CompareElement {
         // TODO code application logic here
         String[] str = {"keishna","duraj","ritesh","sanjay","raj", "Puraj"};
         
-        Set set = new TreeSet();
+        TreeSet<String> set = new TreeSet();
         for(int i=0; i<str.length; i++){
             set.add(str[i]);
         }
+        
+       // first -min
+       // last - max
+        String f= set.first();
+        String l=set.last();
+        
         
         /**
          * Get MIN sting from SET of String

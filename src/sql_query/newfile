@@ -1,0 +1,15 @@
+
+id name loca sal
+List employelist   20% inc  cat-
+
+List empList2 = empList.stream()
+       .filter(e -> e.getLocation().equalsIgnoreCase("Channai"))
+       .map(e -> e.getsalary + ((e.getsalary/100)*20))
+       .collect(Collector.toList());
+
+
+
+
+
+
+22000

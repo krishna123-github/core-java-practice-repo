@@ -25,6 +25,7 @@ public class ReadOnlyCollection {
         
         Map map = new HashMap((Map) stuff);
         map = Collections.unmodifiableMap(map);
+        map.put("s", "ff");
         
         System.out.println("Collectiion is read only now");
     }

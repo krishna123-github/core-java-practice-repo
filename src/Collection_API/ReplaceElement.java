@@ -8,7 +8,7 @@ public class ReplaceElement {
  
     public static void main(String[] args) {
         
-        String str = "one two three four five six seven";
+        String str = "one two six four five six seven";
         List list = Arrays.asList(str.split(" "));
         
         System.out.println("Before Replace: "+list);

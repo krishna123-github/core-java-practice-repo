@@ -20,6 +20,13 @@ public class CollectionToArray {
         for(String s : str){
             System.out.println(s);
         }
+        
+      // wrong way  
+//         List<Integer> list2 = new ArrayList();
+//        
+//        list2.add(2);
+//        list2.add(4);
+//        list2.toArray(int[]);
     }
     
 }
