@@ -21,6 +21,7 @@ public class StreamEmployeeList {
         Department hr = new Department("HR", 50);
         Department ops = new Department("OP", 25);
         Department tech = new Department("Tech", 150);
+        Department mech = new Department("Mech", 60);
 
         List<Employee> employeeList = Arrays.asList(new Employee("David", 32, "Matara", account),
                 new Employee("Brayan", 25, "Galle", hr),
